@@ -1,0 +1,47 @@
+<!-- Modify it at your will. -->
+<group name="WafF5Rule,">
+    <rule id="100800" level="0">
+        <decoded_as>waf_f5</decoded_as>
+        <description>F5 BIG-IP: Tráfego nas aplicações identificado pelo WAF.</description>
+    </rule>
+    <rule id="100801" level="12">
+        <if_sid>100800</if_sid>
+        <regex>SQL-Injection</regex>
+        <description>F5 BIG-IP: Ataque de SQL-Injection identificado pelo WAF.</description>
+    </rule>
+     <rule id="100802" level="12">
+        <if_sid>100800</if_sid>
+        <regex>Command Execution</regex>
+        <description>F5 BIG-IP: Ataque de Command Execution identificado pelo WAF.</description>
+    </rule>
+    <rule id="100803" level="12">
+        <if_sid>100800</if_sid>
+        <regex>Abuse of Functionality</regex>
+        <description>Ataque de Abuse of Functionality identificado pelo WAF.</description>
+    </rule>
+    <rule id="100804" level="12">
+        <if_sid>100800</if_sid>
+        <regex>HTTP Parser Attack</regex>
+        <description>F5 BIG-IP: Ataque de HTTP Parser Attack identificado pelo WAF.</description>
+    </rule>
+    <rule id="100805" level="12">
+        <if_sid>100800</if_sid>
+        <regex>Cross Site Scripting (XSS)</regex>
+        <description>F5 BIG-IP: Ataque de Cross Site Scripting (XSS) identificado pelo WAF.</description>
+    </rule>
+    <rule id="100806" level="12">
+        <if_sid>100800</if_sid>
+        <regex>Information Leakage</regex>
+        <description>F5 BIG-IP: Ataque de Information Leakage identificado pelo WAF.</description>
+    </rule>
+    <rule id="100807" level="12">
+        <if_sid>100800</if_sid>
+        <regex>Predictable Resource Location</regex>
+        <description>F5 BIG-IP: Ataque de Predictable Resource Location identificado pelo WAF.</description>
+    </rule>
+    <rule id="100808" level="12">
+        <if_sid>100800</if_sid>
+        <regex>Path Traversal</regex>
+        <description>F5 BIG-IP: Ataque de Path Traversal identificado pelo WAF.</description>
+    </rule>
+</group>
