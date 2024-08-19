@@ -1,9 +1,10 @@
 <decoder name="waf_f5">
-    <prematch>waf:</prematch>
+    <prematch>ASM:</prematch>
 </decoder>
+
 
 <decoder name="waf_f5_child">
     <parent>waf_f5</parent>
-    <regex>(\w+ \s*\d+ \d+:\d+:\d+) (\d+.\d+.\d+.\d+) (\w+) "(\.*)","(\d+-\d+-\d+ \d+:\d+:\d+)","(\d+.\d+.\d+.\d+)","(\d+)","(\w+)","(\.+)","(\.+)","(\d+.\d+.\d+.\d+)"</regex>
-    <order>timeblock,wafip,typelog,attack,timesrc,dstip,dstport,country,url,outro,srcip</order>
+    <regex>"(\.*)","(\d+-\d+-\d+ \d+:\d+:\d+)","(\d+.\d+.\d+.\d+)","(\d+)","(\w+)","(\.+)","(\.+)","(\d+.\d+.\d+.\d+)",(\.+)"(\d+.\d+.\d+.\d+)"</regex>
+    <order>attack,timesrc,dstip,dstport,country,url,outro,srcip,desconhecido,wafip</order>
 </decoder>
